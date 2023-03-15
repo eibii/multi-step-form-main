@@ -1,0 +1,17 @@
+<a
+  class="flex gap-3 text-white cursor-pointer group"
+  [ngClass]="{ active: currentRoute === to }"
+  href="{{ to }}"
+>
+  <div
+    class="self-center flex-none w-8 h-8 flex justify-center group-hover:bg-primary border border-white group-hover:border-primary rounded-full"
+  >
+    <div class="self-center group-hover:text-secondary text-xs">{{ idx }}</div>
+  </div>
+  <div *ngIf="!onlyNumber" class="self-center flex-1 flex flex-col">
+    <div class="uppercase font-light text-white/60 text-xs -mt-1">
+      Step {{ idx }}
+    </div>
+    <div class="uppercase font-bold leading-3 text-base">{{ title }}</div>
+  </div>
+</a>

@@ -1,0 +1,3 @@
+<div class="flex gap-9 py-8">
+  <app-step-component *ngFor="let step of steps; let i = index" [idx]="i+1" [title]="step.title" [to]="step.to" [onlyNumber]="true"/>
+</div>

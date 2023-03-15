@@ -1,0 +1,22 @@
+<div class="relative p-4">
+  <div class="flex flex-col gap-8 p-2 bg-white rounded-xl shadow-lg">
+    <div class="flex-none flex flex-col gap-2 pt-7 pb-1">
+      <div class="text-secondary font-bold text-4xl">{{ forms[key].title }}</div>
+      <div class="text-base text-gray-400">{{ forms[key].description }}</div>
+    </div>
+    <div class="flex-1 w-full">
+      <router-outlet/>
+    </div>
+  </div>
+  <div class="fixed left-0 bottom-0 w-full bg-white">
+    <div class="flex-none w-full flex justify-between p-4">
+      <div class="flex-1 flex justify-start">
+        <a *ngIf="forms[key].backTo" class="action-button" href="{{forms[key].backTo}}"> Go Back </a>
+      </div>
+      <div class="flex-1 flex justify-end">
+        <a *ngIf="forms[key].nextTo" class="action-button" href="{{forms[key].nextTo}}"> Next Step </a>
+        <a *ngIf="key + 1 === forms.length" class="action-button bg-violet-700 cursor-pointer"> Confirm</a>
+      </div>
+    </div>
+  </div>
+</div>

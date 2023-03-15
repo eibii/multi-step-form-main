@@ -1,0 +1,12 @@
+<div class="relative rounded-xl w-[274px] h-full">
+  <div
+    class="absolute w-full h-full bg-bottom bg-no-repeat bg-contain"
+    [ngStyle]="{
+      backgroundImage: 'url(\'assets/img/bg-sidebar-desktop.svg\')'
+    }"
+  >
+  </div>
+  <div class="relative p-8 flex flex-col gap-9">
+    <app-step-component *ngFor="let step of steps; let i = index" [idx]="i+1" [title]="step.title" [to]="step.to" />
+  </div>
+</div>

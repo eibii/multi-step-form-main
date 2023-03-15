@@ -1,0 +1,23 @@
+<div class="relative w-screen h-screen flex justify-center">
+  <div *ngIf="!isMobile" class="custom-container bg-white self-center rounded-xl shadow-lg">
+    <div class="p-4">
+      <div class="flex">
+        <div class="flex-none"><app-sidebar-component [steps]="steps"/></div>
+        <div class="flex-1 flex justify-center">
+          <app-form-component [forms]="forms"/>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="isMobile" class="relative md:hidden w-full flex flex-col">
+    <div class="absolute w-full h-[33%] bg-top bg-no-repeat bg-cover"
+    [ngStyle]="{
+      backgroundImage: 'url(\'assets/img/bg-sidebar-mobile.svg\')'
+    }"></div>
+    <div class="relative flex justify-center">
+      <app-sidebar-mobile-component [steps]="steps"/>
+    </div>
+    <app-form-mobile-component [forms]="forms"/>
+  </div>
+</div>
+

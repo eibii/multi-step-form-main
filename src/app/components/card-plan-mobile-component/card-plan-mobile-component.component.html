@@ -1,0 +1,17 @@
+<div
+  class="flex gap-4 border rounded-lg p-2"
+  [ngClass]="{
+    'border-violet-500 bg-violet-50': isSelected,
+    'border-gray-200': !isSelected
+  }"
+>
+  <div class="flex-none flex justify-center">
+    <div class="self-center">
+      <img class="w-11 h-11" src="{{ icon }}" alt="" />
+    </div>
+  </div>
+  <div class="flex-1 flex flex-col text-base">
+    <div class="font-bold text-secondary">{{ title }}</div>
+    <div class="text-sm text-gray-400 font-light">{{ price }}</div>
+  </div>
+</div>

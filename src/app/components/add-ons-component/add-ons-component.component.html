@@ -1,0 +1,25 @@
+<div
+  class="flex gap-4 border rounded-lg px-4 py-2"
+  [ngClass]="{ 'border-violet-500': value, 'border-transparent': !value }"
+>
+  <div class="flex-none flex justify-center">
+    <div class="self-center">
+      <label class="check">
+        <input
+          class="peer"
+          type="checkbox"
+          [(ngModel)]="value"
+          (change)="onChange(value)"
+        />
+        <i class="bi bi-check"></i>
+      </label>
+    </div>
+  </div>
+  <div class="flex-1 flex flex-col text-base">
+    <div class="font-bold text-secondary">{{ title }}</div>
+    <div class="text-sm font-light italic">{{ description }}</div>
+  </div>
+  <div class="flex-none self-center font-semibold text-base text-violet-400">
+    {{ price }}
+  </div>
+</div>

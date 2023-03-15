@@ -1,0 +1,30 @@
+<div class="flex flex-col gap-8">
+  <div class="flex flex-col bg-violet-50 p-4 rounded-lg">
+    <div class="flex-1 flex justify-between">
+      <div class="flex flex-col">
+        <div class="font-semibold">{{ planTitle }} ({{ planType }})</div>
+        <a class="text-gray-400 hover:text-secondary underline" href="/step-2">
+          Change
+        </a>
+      </div>
+      <div class="self-center flex-none font-bold">
+        {{ planPrice }}
+      </div>
+    </div>
+    <div *ngIf="addOns.length" class="my-4 border border-gray-200"></div>
+    <div class="flex flex-col gap-2">
+      <div *ngFor="let item of addOns" class="flex-1 flex">
+        <div class="flex-1 text-gray-400">
+          {{ item.title }}
+        </div>
+        <div class="flex-none font-semibold">
+          {{ item.price }}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="flex-1 flex text-base">
+    <div class="flex-1 text-gray-400">Total (per month)</div>
+    <div class="flex-none font-bold text-violet-700">+{{ total }}/mo</div>
+  </div>
+</div>

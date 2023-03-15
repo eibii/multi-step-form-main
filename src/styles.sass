@@ -1,0 +1,47 @@
+@import "bootstrap-icons/font/bootstrap-icons.css"
+  
+@tailwind base
+@tailwind components
+@tailwind utilities
+
+@layer components
+  .custom-container
+    @apply w-full max-w-[940px] mx-auto
+
+  body
+    @apply bg-[#EFF5FF]
+
+  .action-button
+    @apply px-6 py-3 rounded-md bg-secondary text-white text-base
+
+  .field
+    @apply block mb-4 text-secondary
+
+    & > span
+      @apply block text-base font-medium mb-3 leading-3
+
+    input[type="text"]
+      @apply transition-all ease-in-out delay-75 duration-100 appearance-none caret-gray-500 font-semibold text-base rounded-md block w-full h-[45px] p-3 py-2 border border-gray-300 text-slate-400 focus:outline focus:outline-2 focus:outline-gray-500/50 focus:border-gray-500 focus:ring-gray-500
+
+  .check
+    @apply relative cursor-pointer
+
+    input[type=checkbox]
+      @apply appearance-none rounded-lg block w-8 h-8 shadow-lg shadow-violet-700/30 border border-violet-300 bg-violet-500/10 checked:bg-violet-500/70 focus:outline focus:outline-4 focus:outline-violet-500/50 focus:border-violet-500 focus:ring-violet-500 disabled:bg-flow-800/30 disabled:cursor-not-allowed
+
+      &:checked ~ i
+        @apply transition-all ease-in-out duration-100 text-white
+        
+        &
+          animation: zoom-anime 0.3s
+
+    i
+      @apply transition-all ease-in-out delay-75 duration-100 absolute -top-1 text-4xl text-violet-500/0
+      &
+        left: -3px
+
+@keyframes zoom-anime
+  0%, 100%
+    @apply transform scale-100
+  50%
+    @apply transform scale-150

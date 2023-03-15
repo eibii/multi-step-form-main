@@ -1,0 +1,32 @@
+<div class="flex flex-col gap-2">
+  <label class="field">
+    <span>Name</span>
+    <input
+      placeholder="e.g. Stephen King"
+      [(ngModel)]="name"
+      autocomplete="off"
+      type="text"
+      (keyup)="onKeyup('name')"
+    />
+  </label>
+  <label class="field">
+    <span>Email Address</span>
+    <input
+      placeholder="e.g. stephenking@lorem.com"
+      [(ngModel)]="email"
+      autocomplete="off"
+      type="text"
+      (keyup)="onKeyup('email')"
+    />
+  </label>
+  <label class="field">
+    <span>Phone Number</span>
+    <input
+      placeholder="e.g. +1 234 567 890"
+      [(ngModel)]="phone"
+      autocomplete="off"
+      type="text"
+      (keyup)="onKeyup('phone')"
+    />
+  </label>
+</div>
