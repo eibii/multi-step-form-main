@@ -10,8 +10,8 @@ This is a solution to the [Multi-step form](https://www.frontendmentor.io/challe
 
 ### 🔗 Links
 
-- [Solution URL:](https://github.com/eibii/nft-preview-card-component-main/)
-- [Live Site URL:](https://eibii.github.io/nft-preview-card-component-main/)
+- [Solution URL:](https://github.com/eibii/multi-step-form-main/)
+- [Live Site URL:](https://deluxe-souffle-cd72ad.netlify.app/)
 
 ## 👨🏻‍💻 My process
 
