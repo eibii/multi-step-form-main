@@ -8,10 +8,10 @@
   </div>
   <div class="flex-none w-full flex justify-between pt-14 pb-2">
     <div class="flex-1 flex justify-start">
-      <a *ngIf="forms[key].backTo" class="action-button" href="{{forms[key].backTo}}"> Go Back </a>
+      <a *ngIf="forms[key].backTo" class="action-button" routerLink="{{forms[key].backTo}}"> Go Back </a>
     </div>
     <div class="flex-1 flex justify-end">
-      <a *ngIf="forms[key].nextTo" class="action-button" href="{{forms[key].nextTo}}"> Next Step </a>
+      <a *ngIf="forms[key].nextTo" class="action-button" routerLink="{{forms[key].nextTo}}"> Next Step </a>
       <a *ngIf="key + 1 === forms.length" class="action-button bg-violet-700 cursor-pointer"> Confirm</a>
     </div>
   </div>
