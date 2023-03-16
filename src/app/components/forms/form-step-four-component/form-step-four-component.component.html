@@ -2,8 +2,13 @@
   <div class="flex flex-col bg-violet-50 p-4 rounded-lg">
     <div class="flex-1 flex justify-between">
       <div class="flex flex-col">
-        <div class="font-semibold">{{ planTitle }} ({{ planType }})</div>
-        <a class="text-gray-400 hover:text-secondary underline" href="/step-2">
+        <div *ngIf="planTitle && planType" class="font-semibold">
+          {{ planTitle }} ({{ planType }})
+        </div>
+        <a
+          class="text-gray-400 hover:text-secondary underline"
+          routerLink="/step-2"
+        >
           Change
         </a>
       </div>
